@@ -1,0 +1,5 @@
+<p>tv works!</p>
+<div *ngFor="let p of listProdcut">
+    <app-showoneproduct [product]="p" (notif)="increaseLike($event)"></app-showoneproduct>
+
+</div>
