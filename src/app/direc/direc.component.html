@@ -1,0 +1,51 @@
+<table border="3">
+<tr>
+    <td> id</td>
+    <td> title</td>
+    <td> price</td>
+    <td>quantity</td>
+    <td>like</td>
+    <td>Actions</td>
+</tr>
+<tr *ngFor="let p of listProdcut; let k=index">
+ 
+<td>
+    {{p.id}}
+</td>
+<td>
+    {{p.title}}
+</td>
+<td>
+    {{p.price}}
+</td>
+<td>
+    {{p.quantity}}
+</td>
+<td>
+    {{p.like}}
+</td>
+<td>
+    <input type="submit" value="buy" [disabled]="p.quantity==0" (click)="decreaseQ(p)">
+    <div *ngIf="p.quantity==0">
+ <input type="submit" value="buy" [disabled]="true">
+</div>
+<div *ngIf="p.quantity!==0">
+    <input type="submit" value="buy" [disabled]="false" >
+   </div>
+ <input type="submit" value="like" (click)="increaseLike(k)">
+</td>
+</tr>
+
+</table>
+
+<hr>
+<div *ngFor="let p of listProdcut; let i=index">
+
+    {{p.id}}
+    {{p.title}}
+    <div *ngIf=" show==true && i==j">
+    {{p.quantity}}
+    {{p.like}}
+</div>
+<input type="submit" value="detail" (click)="showMsg(i)">
+</div>
