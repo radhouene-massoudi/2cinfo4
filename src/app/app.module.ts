@@ -13,6 +13,7 @@ import { PcComponent } from './pc/pc.component';
 import { TvComponent } from './tv/tv.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { ShowoneproductComponent } from './showoneproduct/showoneproduct.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ShowoneproductComponent } from './showoneproduct/showoneproduct.compone
     PcComponent,
     TvComponent,
     MobileComponent,
-    ShowoneproductComponent
+    ShowoneproductComponent,
+    AddproductComponent
   ],
   imports: [
     BrowserModule,

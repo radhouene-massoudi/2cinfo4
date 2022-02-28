@@ -1,0 +1,30 @@
+
+<form #f="ngForm">
+<label> id</label>
+<input type="number" name="id" ngModel required #id="ngModel">
+<div *ngIf="id.invalid && id.touched">
+msg error
+</div>
+<label > title</label>
+<input type="text" name="title" ngModel required minlength="3" #title="ngModel">
+<div *ngIf="title.invalid ">
+     <div *ngIf="title.errors?.['required']">
+        required
+     </div>
+     <div *ngIf="title.errors?.['minlength']">
+        minlenght
+    </div>
+    </div>
+<label> quantity</label>
+<input type="number" name="Q" ngModel>
+<label>price</label>
+<input type="number" name="price" ngModel>
+<input type="submit" value="save 2" (click)="showform(f.valid)" [disabled]="f.untouched">
+
+<div *ngIf="f.valid">
+<input type="submit" value="save" (click)="showform(f.valid)" [disabled]="false">
+</div>
+<div *ngIf="f.valid==false">
+    <input type="submit" value="save" (click)="showform(title)" >
+    </div>
+</form>
