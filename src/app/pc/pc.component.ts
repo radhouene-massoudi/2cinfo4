@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AmineService } from '../amine.service';
 
 @Component({
   selector: 'app-pc',
@@ -11,9 +12,10 @@ export class PcComponent implements OnInit {
     {id: 2, title: "pc 2", price: 21, quantity: 10, like: 0},
     {id: 3, title: "pc 3", price: 16, quantity: 8, like: 0}, ];
   
-  constructor() { }
+  constructor(private s:AmineService) { }
 
   ngOnInit(): void {
+    this.s.msg1();
   }
 
 }

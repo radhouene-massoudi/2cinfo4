@@ -14,7 +14,18 @@ import { TvComponent } from './tv/tv.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { ShowoneproductComponent } from './showoneproduct/showoneproduct.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
-
+import { NavComponent } from './nav/nav.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { LoginComponent } from './login/login.component';
+import { ParamComponent } from './param/param.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
+import { FetchuserComponent } from './fetchuser/fetchuser.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailUserComponent } from './detail-user/detail-user.component';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { Child2Component } from './child2/child2.component';
+import { Parent2Component } from './parent2/parent2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +38,25 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     TvComponent,
     MobileComponent,
     ShowoneproductComponent,
-    AddproductComponent
+    AddproductComponent,
+    NavComponent,
+    NotfoundComponent,
+    LoginComponent,
+    ParamComponent,
+    DetailProductComponent,
+    FetchuserComponent,
+    DetailUserComponent,
+    DeleteuserComponent,
+    UpdateuserComponent,
+    Child2Component,
+    Parent2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-  ],
+    FormsModule,
+    HttpClientModule 
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })

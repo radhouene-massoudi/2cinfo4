@@ -1,0 +1,16 @@
+
+<form #f="ngForm">
+    <label> cin</label>
+    <input type="number" name="id" ngModel   >
+    
+    <label > name</label>
+    <input type="text" name="name" ngModel [(ngModel)]="name" >
+    
+    <label> surname</label>
+    <input type="text" name="surname" ngModel [(ngModel)]="surnamr">
+    <label>age</label>
+    <input type="number" name="age" ngModel [(ngModel)]="age">
+    <input type="submit" value="save" (click)="Update(f.value)" >
+    
+    
+    </form>

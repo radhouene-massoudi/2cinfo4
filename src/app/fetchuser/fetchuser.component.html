@@ -1,0 +1,8 @@
+<p>fetchuser works!</p>
+<div *ngFor="let u of users">
+{{u.id}}
+{{u.name}}
+{{u.surname}}
+<a [routerLink]="['/del/',u.id]">delete</a>
+<a [routerLink]="['/update/',u.id]">update</a>
+</div>

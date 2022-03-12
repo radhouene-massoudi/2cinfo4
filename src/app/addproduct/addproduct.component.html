@@ -1,7 +1,7 @@
 
 <form #f="ngForm">
 <label> id</label>
-<input type="number" name="id" ngModel required #id="ngModel">
+<input type="number" name="id" ngModel  required #id="ngModel">
 <div *ngIf="id.invalid && id.touched">
 msg error
 </div>
@@ -19,7 +19,7 @@ msg error
 <input type="number" name="Q" ngModel>
 <label>price</label>
 <input type="number" name="price" ngModel>
-<input type="submit" value="save 2" (click)="showform(f.valid)" [disabled]="f.untouched">
+<input type="submit" value="envoyer les infos vers database" (click)="save(f.value)" [disabled]="f.untouched">
 
 <div *ngIf="f.valid">
 <input type="submit" value="save" (click)="showform(f.valid)" [disabled]="false">

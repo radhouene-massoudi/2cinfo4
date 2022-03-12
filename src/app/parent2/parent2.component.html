@@ -1,0 +1,4 @@
+<p>parent2 works!</p>
+<div *ngFor="let u of users">
+<app-child2 [p]="u" (msg)="after($event)"></app-child2>
+</div>

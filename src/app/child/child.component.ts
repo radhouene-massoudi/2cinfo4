@@ -16,4 +16,7 @@ export class ChildComponent implements OnInit {
 sendnotif(){
   this.notif.emit('child');
 }
+msg1(){
+  alert('bonjour')
+}
 }

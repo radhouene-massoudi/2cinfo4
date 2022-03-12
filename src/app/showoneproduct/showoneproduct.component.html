@@ -4,3 +4,4 @@
 {{product.title}}
 {{product.like}}
 <input type="submit" value="like" (click)="senddatatoparent(product)">
+<a [routerLink]="['/detail/',product.id]">detail</a>
